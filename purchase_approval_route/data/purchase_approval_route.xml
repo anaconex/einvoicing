@@ -41,6 +41,7 @@ ${object.product_computation_table() | safe}
                 <br/>
                 <h5>  Product Information :</h5>
                 <t t-esc="object.product_computation_table() | safe"/>
+            </p>
             <p>
                 <a t-att-href="'/mail/view?model=%s&amp;res_id=%s' % (object._name, object.id)">
                     View Purchase Order
