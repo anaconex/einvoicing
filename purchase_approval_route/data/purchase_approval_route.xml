@@ -34,9 +34,13 @@ ${object.product_computation_table() | safe}
                 <t t-esc="object.sudo().current_approver.user_id.name"/>,
             </p>
             <p>
-                You have been requested to approve the purchase order
+                You have been requested to approve the purchase order 
                 <t t-esc="object.name"/>.
             </p>
+            <p>
+                <br/>
+                <h5>  Product Information :</h5>
+                <t t-esc="object.product_computation_table() | safe">
             <p>
                 <a t-att-href="'/mail/view?model=%s&amp;res_id=%s' % (object._name, object.id)">
                     View Purchase Order
